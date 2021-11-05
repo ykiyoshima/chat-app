@@ -34,12 +34,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore.js";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAA4a36Jd98Fm_CmlOOmP26uVA9Y1xY6mA",
-    authDomain: "chat-app-02-93ebe.firebaseapp.com",
-    projectId: "chat-app-02-93ebe",
-    storageBucket: "chat-app-02-93ebe.appspot.com",
-    messagingSenderId: "511152250801",
-    appId: "1:511152250801:web:494b15a81654b404f9e790"
+    
 };
 
 // Initialize Firebase
