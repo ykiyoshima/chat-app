@@ -1,0 +1,304 @@
+body {
+    width: 100%;
+    background-image: url(../img/djbackimage.jpeg);
+    background-size: cover;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+.wrapper {
+    width: 1280px;
+    height: 800px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.container h1 {
+    font-size: 48px;
+}
+
+#control {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    width: 960px;
+}
+
+#control div {
+    cursor: pointer;
+}
+
+#rec-start, #rec-stop {
+    background: rgb(255, 51, 0);
+    color: white;
+    width: 180px;
+    border-radius: 8px;
+    display: none;
+}
+
+#rec-start.active, #rec-stop.active{
+    display: block;
+}
+
+#play-start, #play-stop {
+    background: rgb(0, 217, 255);
+    color: white;
+    width: 180px;
+    border-radius: 8px;
+    margin-left: 32px;
+    display: none;
+}
+
+#play-start.active, #play-stop.active {
+    display: block;
+}
+
+#fix {
+    background: rgb(0, 38, 255);
+    color: white;
+    width: 180px;
+    border-radius: 8px;
+    margin-left: 32px;
+}
+
+#fixed-play-start, #fixed-play-stop {
+    background: rgb(119, 0, 255);
+    color: white;
+    width: 180px;
+    border-radius: 8px;
+    margin-left: 32px;
+    display: none;
+}
+
+#fixed-play-start.active, #fixed-play-stop.active {
+    display: block;
+}
+
+#control div p {
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+    height: 24px;
+}
+
+#pads {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 32px;
+    text-align: center;
+    width: 1280px;
+    height: 720px;
+}
+
+#loop-sounds-container {
+    width: 640px;
+    height: 608px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 4px solid white;
+}
+
+#pads2 {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+#non-loop-sounds-container {
+    width: 424px;
+    height: 318px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 4px solid white;
+}
+
+.pad {
+    width: 88px;
+    height: 88px;
+    border-radius: 8px;
+    margin: 32px 16px 0;
+    line-height: 88px;
+    cursor: pointer;
+}
+
+.pad:hover {
+    filter: brightness(150%);
+}
+
+.pad:active {
+    filter: brightness(200%);
+}
+
+#loop-sounds-contents p, #non-loop-sounds-contents p{
+    font-size: 24px;
+    margin: 0;
+}
+
+.played {
+    filter: brightness(200%);
+}
+
+#storage {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 16px;
+    width: 480px;
+    height: 272px;
+    text-align: center;
+}
+
+#output {
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 8px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px
+}
+
+.circle {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    font-size: 20px;
+    line-height: 64px;
+    cursor: pointer;
+}
+
+#rec-control {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    height: 96px;
+    width: 480px;
+}
+
+#save {
+    background: rgb(0, 255, 64);
+    color: white;
+    width: 180px;
+    height: 72px;
+    border-radius: 8px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#clear {
+    background: rgb(240, 236, 1);
+    color: white;
+    width: 180px;
+    height: 72px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 96px;
+    display: none;
+}
+
+#clearing {
+    background: rgb(240, 236, 1);
+    color: white;
+    width: 180px;
+    height: 72px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 96px;
+    display: none;
+}
+
+#clear.active, #clearing.active {
+    display: block;
+}
+
+#save p, #clear p, #clearing p {
+    text-align: center;
+}
+
+.btn {
+    opacity: .8;
+}
+
+.btn:hover {
+    opacity: 1;
+    box-shadow: 0 4px 4px black;
+}
+
+.btn:active:not(#tempo) {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+#modal {
+    position: fixed;
+    top: calc(50% - 540px / 2);
+    left: calc(50% - 960px / 2);
+    width: 960px;
+    height: 540px;
+    border-radius: 64px;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    z-index: 1;
+    transition: opacity .3s;
+    pointer-events: none;
+}
+
+#modal.appear {
+    opacity: 1;
+}
+
+#modal div {
+    width: 800px;
+    height: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#modal h2 {
+    text-align: center;
+    font-size: 40px;
+    margin: 32px 0;
+}
+
+#modal ol {
+    list-style: decimal;
+    font-size: 20px;
+}
+
+#modal li span {
+    color: red;
+    text-decoration: underline;
+}
+
+#modal div ol li + li {
+    margin-top: 16px;
+}
+
+#modal div i {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 32px;
+    cursor: pointer;
+    pointer-events: initial;
+}

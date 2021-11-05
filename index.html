@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web DJs</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <audio id="low" src="audio/low.mp3" type="audio/mpeg"></audio>
+    <audio id="arp-sound" src="audio/arp.mp3" type="audio/mpeg"></audio>
+    <audio id="arp2-sound" src="audio/arp2.mp3" type="audio/mpeg" loop=""></audio>
+    <audio id="bu-sound" src="audio/buildup.mp3" type="audio/mpeg"></audio>
+    <audio id="chord-sound" src="audio/chord.mp3" type="audio/mpeg"></audio>
+    <audio id="clap-sound" src="audio/clap.mp3" type="audio/mpeg"></audio>
+    <audio id="cl4-sound" src="audio/claploop4.mp3" type="audio/mpeg"></audio>
+    <audio id="crash-sound" src="audio/crash.mp3" type="audio/mpeg"></audio>
+    <audio id="drop-sound" src="audio/drop.mp3" type="audio/mpeg"></audio>
+    <audio id="dsc-sound" src="audio/dubstepchord.mp3" type="audio/mpeg"></audio>
+    <audio id="dsd-sound" src="audio/dubstepdrum.mp3" type="audio/mpeg"></audio>
+    <audio id="ipt-sound" src="audio/impact.mp3" type="audio/mpeg"></audio>
+    <audio id="kick-sound" src="audio/kick.mp3" type="audio/mpeg"></audio>
+    <audio id="kl4-sound" src="audio/kickloop4.mp3" type="audio/mpeg"></audio>
+    <audio id="kl8-sound" src="audio/kickloop8.mp3" type="audio/mpeg"></audio>
+    <audio id="kl16-sound" src="audio/kickloop16.mp3" type="audio/mpeg"></audio>
+    <audio id="nu-sound" src="audio/noiseup.mp3" type="audio/mpeg"></audio>
+    <audio id="piano-sound" src="audio/piano.mp3" type="audio/mpeg"></audio>
+    <audio id="snare-sound" src="audio/snare.mp3" type="audio/mpeg"></audio>
+    <audio id="vcd-sound" src="audio/vocoder.mp3" type="audio/mpeg"></audio>
+
+    <div class="wrapper">
+        <div class="container">
+            <h1>Web DJs</h1>
+            <i id="help" class="far fa-question-circle"></i>
+
+            <div id="control">
+                <div id="rec-start" class="btn active">
+                    <p>Start Rec.</p>
+                </div>
+                <div id="rec-stop" class="btn">
+                    <p>Stop Rec.</p>
+                </div>
+                <div id="play-start" class="btn active">
+                    <p>Play Music</p>
+                </div>
+                <div id="play-stop" class="btn">
+                    <p>Stop Music</p>
+                </div>
+                <div id="fix" class="btn">
+                    <p>Fix Music</p>
+                </div>
+                <div id="fixed-play-start" class="btn active">
+                    <p>Play Fixed Music</p>
+                </div>
+                <div id="fixed-play-stop" class="btn">
+                    <p>Stop Fixed Music</p>
+                </div>
+            </div>
+
+            <div id="pads">
+                <fieldset id="loop-sounds-container"><legend>Loop Sounds</legend></fieldset>
+                <div id="pads2">
+                    <fieldset id="non-loop-sounds-container"><legend>Non Loop Sounds</legend></fieldset>
+                    <div id="storage">
+                        <ul id="output"></ul>
+                        <div id="rec-control">
+                            <div id="save" class="btn">
+                                <p>Save Fixed Music</p>
+                            </div>
+                            <div id="clear" class="btn active">
+                                <p>Clear Fixed Music</p>
+                            </div>
+                            <div id="clearing" class="btn">
+                                <p>Clearing...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
